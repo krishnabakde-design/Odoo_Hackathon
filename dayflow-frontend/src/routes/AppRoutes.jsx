@@ -11,6 +11,7 @@ import AdminDashboard from "../pages/admin/Dashboard";
 import Employees from "../pages/admin/Employees";
 import Approvals from "../pages/admin/Approvals";
 import AdminPayroll from "../pages/admin/Payroll";
+import Signup from "../pages/auth/Signup";
 
 import { isAuthenticated, getRole } from "../utils/auth";
 
@@ -34,6 +35,7 @@ export default function AppRoutes() {
         <Route path="/admin/employees" element={<ProtectedRoute><Employees /></ProtectedRoute>} />
         <Route path="/admin/approvals" element={<ProtectedRoute><Approvals /></ProtectedRoute>} />
         <Route path="/admin/payroll" element={<ProtectedRoute><AdminPayroll /></ProtectedRoute>} />
+        <Route path="/signup" element={<Signup />} />
 
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
