@@ -8,8 +8,8 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // UI-only: redirect after login
-    navigate("/admin"); // demo purpose
+    // DEMO MODE: any values → admin dashboard
+    navigate("/admin/dashboard");
   };
 
   return (
@@ -30,13 +30,13 @@ export default function Login() {
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
 
-          {/* Email */}
+          {/* Login ID */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Login ID / Email Address
             </label>
             <input
-              type="email"
+              type="text"
               placeholder="you@company.com"
               className="w-full border rounded-lg px-3 py-2
                          focus:outline-none focus:ring-2
